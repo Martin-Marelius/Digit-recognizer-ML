@@ -7,11 +7,6 @@ from tensorflow.keras.regularizers import l2
 from tensorflow.keras.callbacks import ReduceLROnPlateau
 from tensorflow.keras.utils import to_categorical
 
-if tf.config.list_physical_devices('GPU'):
-    print("GPU is available and TensorFlow is using it.")
-else:
-    print("GPU is not available. TensorFlow is using the CPU.")
-
 train_data = pd.read_csv('MNIST_CSV/mnist_test.csv')
 test_data = pd.read_csv('MNIST_CSV/mnist_train.csv')
 
